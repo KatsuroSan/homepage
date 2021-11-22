@@ -67,7 +67,7 @@ const Navbar = ( props ) => {
           </LinkItem>
           <LinkItem
             _target="_blank"
-            href="https://github.com/KatsuroSan"
+            href="https://github.com/KatsuroSan/homepage"
             path={path}
            
             style={{gap: 4}}
@@ -95,7 +95,7 @@ const Navbar = ( props ) => {
                 <NextLink href={'/works'} passHref>
                   <MenuItem as={Link}>Works</MenuItem>
                 </NextLink>
-                <NextLink href={'https://github.com/KatsuroSan'}>
+                <NextLink href={'https://github.com/KatsuroSan/homepage'}>
                   <MenuItem as={Link}>Code</MenuItem>
                 </NextLink>
               </MenuList>
