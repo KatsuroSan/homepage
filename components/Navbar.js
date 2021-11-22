@@ -69,16 +69,16 @@ const Navbar = ( props ) => {
             _target="_blank"
             href="https://github.com/KatsuroSan/homepage"
             path={path}
-           
             style={{gap: 4}}
             pl={2}
           >
             <Box
-              display="inline-flex"
-              alignItems="center"
+              display={'flex'}
+              alignItems={'center'}
+              onClick={() => window.open('https://github.com/KatsuroSan/homepage')}
             >
-            <IoLogoGithub/>
-            Source
+              <IoLogoGithub/>
+              Source
             </Box>
           </LinkItem>
         </Stack>
@@ -95,9 +95,12 @@ const Navbar = ( props ) => {
                 <NextLink href={'/works'} passHref>
                   <MenuItem as={Link}>Works</MenuItem>
                 </NextLink>
-                <NextLink href={'https://github.com/KatsuroSan/homepage'}>
-                  <MenuItem as={Link}>Code</MenuItem>
-                </NextLink>
+                <MenuItem
+                  as={Link}
+                  href="https://github.com/KatsuroSan/homepage"
+                >
+                  View Source
+                </MenuItem>
               </MenuList>
             
             </Menu>
