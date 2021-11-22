@@ -6,8 +6,8 @@ import { WorkGridItem } from '../components/grid-item';
 import Section from '../components/section';
 import Layout from '../components/layouts/article';
 
-import thumbnailSaiha from '../public/images/SAIHA DOJO.png';
-import thumbnailConsole from '../public/images/dealer console.png';
+import thumbnailSaiha from '../public/images/saiha.png';
+import thumbnailConsole from '../public/images/dealer.png';
 import thumbnailOutfitters from '../public/images/outfitters.jpg';
 import thumbnailPlacide from '../public/images/placide.jpg';
 import thumbnailTsou from '../public/images/tsou.png';

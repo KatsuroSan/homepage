@@ -31,7 +31,7 @@ const Placide = () => (
         </ListItem>
       </List>
       
-      <WorkImage src="/images/Placide.jpg" alt="Placide" />
+      <WorkImage src="/images/placide.jpg" alt="Placide" />
     </Container>
   </Layout>
 )

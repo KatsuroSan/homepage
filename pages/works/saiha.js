@@ -31,7 +31,7 @@ const Saiha = () => (
         </ListItem>
       </List>
       
-      <WorkImage src="/images/saiha dojo.png" alt="Saiha" />
+      <WorkImage src="/images/saiha.png" alt="Saiha" />
       <WorkImage src="/images/works/works_saiha_01.png" alt="Saiha" />
 
     </Container>

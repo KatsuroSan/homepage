@@ -34,7 +34,7 @@ const Outfitters = () => (
         </ListItem>
       </List>
       
-      <WorkImage src="/images/TSOU.png" alt="TSOU"/>
+      <WorkImage src="/images/tsou.png" alt="TSOU"/>
       <WorkImage src="/images/works/works_tsou_01.png" alt="TSOU" />
 
     </Container>

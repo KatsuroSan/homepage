@@ -31,7 +31,7 @@ const UVsoft = () => (
         </ListItem>
       </List>
       
-      <WorkImage src="/images/dealer console.png" alt="UVsoft" />
+      <WorkImage src="/images/dealer.png" alt="UVsoft" />
       <WorkImage src="/images/works/works_console_01.png" alt="UVsoft" />
     </Container>
   </Layout>
