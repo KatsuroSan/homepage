@@ -1,4 +1,4 @@
-import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react'
+import { Container, Badge, Link, List, ListItem, Divider } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
@@ -8,13 +8,17 @@ import React from 'react';
 const Saiha = () => (
   <Layout title="Saiha dojo">
     <Container>
-      <Title>
+      <Title >
         Saiha dojo <Badge>2021-</Badge>
       </Title>
+      
+      <Divider my={2} />
       <P>
         Karate kyokushin-kan karate-do club placed in Brody, Ukraine
       </P>
-      <List ml={4} my={4}>
+      <Divider mt={6} />
+      
+      <List ml={2} my={4}>
         <ListItem>
           <Meta>Website</Meta>
           <Link href="https://saiha-dojo.vercel.app/">

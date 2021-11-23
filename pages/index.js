@@ -1,5 +1,5 @@
 import NextLink from 'next/link';
-import { Box, Button, Container, Heading, Image, useColorModeValue, Icon, Link } from '@chakra-ui/react';
+import { Box, Button, Container, Heading, Image, useColorMode, Icon, Link } from '@chakra-ui/react';
 import React from 'react';
 import Section from '../components/section';
 import Paragraph from '../components/paragraph';
@@ -7,35 +7,41 @@ import { ChevronRightIcon } from '@chakra-ui/icons';
 import { BioSection, BioYear } from '../components/bio';
 import Layout from '../components/layouts/article';
 import { IoLogoInstagram, IoLogoGithub, IoLogoFacebook } from 'react-icons/io5';
-import { List, ListItem } from '@chakra-ui/layout';
+import { List, ListItem, Text } from '@chakra-ui/layout';
 
 
 const Page = () => {
+  const { colorMode, } = useColorMode()
   return (
     <Layout>
       <Container>
-        <Box borderRadius='lg' bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} align='center'>
+        <Box borderRadius='lg'
+             bgGradient={colorMode === "dark"
+               ? 'linear(to-t, transparent, whiteAlpha.300)'
+               : 'linear(to-t, transparent, whiteAlpha.500)'}
+             // bg={colorMode === "light" ? 'whiteAlpha.500' : null}
+             p={3} mb={6} align='center'>
           Hello 👋, I&apos;m a web developer based in Ukraine!
         </Box>
-        <Box display={{md: 'flex'}}>
+        <Box display={{ md: 'flex' }}>
           <Box flexGrow={1}>
             <Heading as={'h2'} variant={'page-title'}>
               Oleh Shutiak
             </Heading>
             <p>Passionate developer ( Web / desktop / mobile )</p>
           </Box>
-          <Box flexShrink={0} mt={{base: 4, md: 0}} ml={{md: 6}} textAlign='center'>
+          <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 6 }} textAlign='center'>
             <Image borderColor='whiteAlpha.800' borderWidth={2} borderStyle='solid'
-                   maxWidth='100px' display='inline-block' borderRadius='full'
-                   src='/images/profile.jpg'
-                   alt='Profile Image'
+              maxWidth='100px' display='inline-block' borderRadius='full'
+              src='/images/profile.jpg'
+              alt='Profile Image'
             />
           </Box>
         </Box>
-        
-        
+
+
         <Section delay={0.1}>
-          <Heading as='h3' variant='section-title'>
+          <Heading as='h3' variant={'section-title'}>
             Work
           </Heading>
           <Paragraph>
@@ -51,13 +57,13 @@ const Page = () => {
           </Paragraph>
           <Box align={'center'} my={4}>
             <NextLink href={'/works'}>
-              <Button rightIcon={<ChevronRightIcon/>} colorScheme={'purple'}>
+              <Button rightIcon={<ChevronRightIcon />} colorScheme={'purple'}>
                 My Portfolio
               </Button>
             </NextLink>
           </Box>
         </Section>
-        
+
         <Section delay={0.2}>
           <Heading
             as={'h3'}
@@ -82,58 +88,58 @@ const Page = () => {
             Works at Highware company
           </BioSection>
         </Section>
-        
+
         <Section delay={0.3}>
           <Heading
             as={'h3'}
             variant={'section-title'}
           >
-            I ♥
+            I ❤️
           </Heading>
-          <Paragraph>
-            Iryna, Coding, Music
-          </Paragraph>
+            <Text align={'right'} pr={4}>
+              Iryna, Coding, Music
+            </Text>
         </Section>
-        
-        <Section delay={0.3}>
+
+        <Section delay={0.3} >
           <Heading as={'h3'} variant={'section-title'}>
             Social links
           </Heading>
-          
-          <List>
+
+          <List align={'right'} >
             <ListItem>
               <Link href={'https://github.com/KatsuroSan'} target={'_blank'}>
                 <Button variant={'ghost'}
-                        leftIcon={<Icon as={IoLogoGithub}/>}
-                        colorScheme={'purple'}>
+                  leftIcon={<Icon as={IoLogoGithub} />}
+                  colorScheme={'purple'}>
                   @KatsuroSan
                 </Button>
               </Link>
             </ListItem>
-            
+
             <ListItem>
               <Link href={'https://instagram.com/_shutiak'} target={'_blank'}>
                 <Button variant={'ghost'}
-                        leftIcon={<Icon as={IoLogoInstagram}/>}
-                        colorScheme={'purple'}>
+                  leftIcon={<Icon as={IoLogoInstagram} />}
+                  colorScheme={'purple'}>
                   @_shutiak
                 </Button>
               </Link>
             </ListItem>
-            
+
             <ListItem>
               <Link href={'https://www.facebook.com/shutyak'} target={'_blank'}>
                 <Button variant={'ghost'}
-                        leftIcon={<Icon as={IoLogoFacebook}/>}
-                        colorScheme={'purple'}>
+                  leftIcon={<Icon as={IoLogoFacebook} />}
+                  colorScheme={'purple'}>
                   @shutyak
                 </Button>
               </Link>
             </ListItem>
-          
-          
+
+
           </List>
-        
+
         </Section>
       </Container>
     </Layout>

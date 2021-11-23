@@ -1,4 +1,4 @@
-import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react';
+import { Container, Badge, Link, List, ListItem, Divider } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { Title, WorkImage, Meta } from '../../components/work';
 import P from '../../components/paragraph';
@@ -11,12 +11,14 @@ const Outfitters = () => (
       <Title>
         Mykolaivska TSOU <Badge>March 2021</Badge>
       </Title>
+      <Divider my={2} />
       <P>
         TSOU is a voluntary, defense-patriotic and sports-technical public organization that complies with this and other laws of Ukraine and its
         Charter of activity of the state in the field of military-patriotic and physical education of citizens of Ukraine, training of citizens of
         Ukraine to defend the Fatherland, including training of conscripts. for the Armed Forces of Ukraine and other military formations formed in
         accordance with the laws of Ukraine in military-technical specialties, development and improvement of technical, applied and aviation sports
       </P>
+      <Divider mt={6} />
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Website</Meta>

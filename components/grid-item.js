@@ -1,6 +1,6 @@
 import NextLink from 'next/link';
 import Image from 'next/image';
-import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react';
+import { Box, Text, LinkBox, LinkOverlay, useColorModeValue } from '@chakra-ui/react';
 import { Global } from '@emotion/react'
 
 
@@ -16,7 +16,7 @@ export const WorkGridItem = ({children, id, title, thumbnail}) => (
         <LinkOverlay href={`/works/${id}`} >
           <Text mt={2} fontSize={20} >{title}</Text>
         </LinkOverlay>
-        <Text fontSize={14}>{children}</Text>
+        <Text fontSize={14} color={useColorModeValue('grayAlpha.200', 'whiteAlpha.600')}>{children}</Text>
       </LinkBox>
     </NextLink>
   </Box>

@@ -1,4 +1,4 @@
-import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react'
+import { Container, Badge, Link, List, ListItem, Divider } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
@@ -11,9 +11,13 @@ const Placide = () => (
       <Title>
         Superior firearms <Badge>November 2021</Badge>
       </Title>
+      <Divider my={2} />
+  
       <P>
         Placide Quality Tools & Advices is a magazine diferent building tools . I built its HTML coding.
       </P>
+      <Divider mt={6} />
+  
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Website</Meta>

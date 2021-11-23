@@ -1,4 +1,4 @@
-import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react'
+import { Container, Badge, Link, List, ListItem, Divider } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
@@ -11,9 +11,11 @@ const UVsoft = () => (
       <Title>
         UVsoft <Badge>2021-</Badge>
       </Title>
+      <Divider my={2} />
       <P>
         Phone dealer console. A software that is an expert in itself, maintains and displays full report of phones in stock and phones sold.
       </P>
+      <Divider mt={6} />
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Website</Meta>
