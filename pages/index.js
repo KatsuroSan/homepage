@@ -16,11 +16,11 @@ const Page = () => {
     <Layout>
       <Container>
         <Box borderRadius='lg'
-             bgGradient={colorMode === "dark"
-               ? 'linear(to-t, transparent, whiteAlpha.300)'
-               : 'linear(to-t, transparent, whiteAlpha.500)'}
-             // bg={colorMode === "light" ? 'whiteAlpha.500' : null}
-             p={3} mb={6} align='center'>
+          bgGradient={colorMode === "dark"
+            ? 'linear(to-t, transparent, whiteAlpha.300)'
+            : 'linear(to-t, transparent, whiteAlpha.500)'}
+          // bg={colorMode === "light" ? 'whiteAlpha.500' : null}
+          p={3} mb={6} align='center'>
           Hello 👋, I&apos;m a web developer based in Ukraine!
         </Box>
         <Box display={{ md: 'flex' }}>
@@ -80,11 +80,11 @@ const Page = () => {
             Completed the Master&apos;s Program in the Odesa State University of Internal Affairs and worked at speciality.
           </BioSection>
           <BioSection>
-            <BioYear>Dec 2020</BioYear>
-            Started to learn development
+            <BioYear>2020</BioYear>
+            Learn development and freelance work
           </BioSection>
           <BioSection>
-            <BioYear>June 2021 at present</BioYear>
+            <BioYear>Jun. 2021 - Dec. 2021</BioYear>
             Works at Highware company
           </BioSection>
         </Section>
@@ -96,9 +96,9 @@ const Page = () => {
           >
             I ❤️
           </Heading>
-            <Text align={'right'} pr={4}>
-              Iryna, Coding, Music
-            </Text>
+          <Text align={'right'} pr={4}>
+            Iryna, Coding, Music
+          </Text>
         </Section>
 
         <Section delay={0.3} >
