@@ -20,14 +20,14 @@ import ThemeTogglerButton from './theme-toggler-button';
 import { IoLogoGithub } from 'react-icons/io5';
 
 
-const LinkItem = ( {href, path, children} ) => {
+const LinkItem = ({ href, path, children }) => {
   const active = path === href;
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900');
   return (
     <NextLink href={href}>
       <Link p={2} bg={active ? 'glassTeal' : undefined}
-            color={active ? '#202023' : inactiveColor}
-            style={{borderRadius: '5px'}}
+        color={active ? '#202023' : inactiveColor}
+        style={{ borderRadius: '5px' }}
       >
         {children}
       </Link>
@@ -35,59 +35,59 @@ const LinkItem = ( {href, path, children} ) => {
   );
 };
 
-const Navbar = ( props ) => {
-  const {path} = props;
+const Navbar = (props) => {
+  const { path } = props;
   return (
     <Box
       position={'fixed'}
       as={'nav'}
       w={'100%'}
       bg={useColorModeValue('#ffffff40', '#20202380')}
-      style={{backdropFilter: 'blur(10px)'}}
+      style={{ backdropFilter: 'blur(10px)' }}
       zIndex={1}
       {...props}
     >
       <Container display={'flex'} p={2} maxW={'container.lg'} wrap={'wrap'} align={'center'} justify="space-between">
         <Flex align={'center'} mr={5}>
           <Heading as={'h1'} size={'lg'} letterSpacing={'tighter'}>
-            <Logo/>
+            <Logo />
           </Heading>
         </Flex>
-        
+
         <Stack
-          direction={{base: 'column', md: 'row'}}
-          display={{base: 'none', md: 'flex'}}
-          width={{base: 'full', md: 'auto'}}
+          direction={{ base: 'column', md: 'row' }}
+          display={{ base: 'none', md: 'flex' }}
+          width={{ base: 'full', md: 'auto' }}
           alignItems={'center'}
           flexGrow={1}
-          mt={{base: 4, md: 0}}
+          mt={{ base: 4, md: 0 }}
         >
           <LinkItem href={'/works'} path={path}>
             Works
           </LinkItem>
           <LinkItem
             _target="_blank"
-            href="https://github.com/KatsuroSan/homepage"
+            href="https://github.com/qatsuro/homepage"
             path={path}
-            style={{gap: 4}}
+            style={{ gap: 4 }}
             pl={2}
           >
             <Box
               display={'flex'}
               alignItems={'center'}
-              onClick={() => window.open('https://github.com/KatsuroSan/homepage')}
+              onClick={() => window.open('https://github.com/qatsuro/homepage')}
             >
-              <IoLogoGithub/>
+              <IoLogoGithub />
               Source
             </Box>
           </LinkItem>
         </Stack>
         <Box flex={1} align={'right'}>
-          <ThemeTogglerButton/>
-          <Box ml={2} display={{base: 'inline-block', md: 'none'}}>
+          <ThemeTogglerButton />
+          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>
-              <MenuButton as={IconButton} icon={<HamburgerIcon/>} variant={'outline'} aria-label={'Options'}/>
-              
+              <MenuButton as={IconButton} icon={<HamburgerIcon />} variant={'outline'} aria-label={'Options'} />
+
               <MenuList>
                 <NextLink href={'/'} passHref>
                   <MenuItem as={Link}>About</MenuItem>
@@ -97,12 +97,12 @@ const Navbar = ( props ) => {
                 </NextLink>
                 <MenuItem
                   as={Link}
-                  href="https://github.com/KatsuroSan/homepage"
+                  href="https://github.com/qatsuro/homepage"
                 >
                   View Source
                 </MenuItem>
               </MenuList>
-            
+
             </Menu>
           </Box>
         </Box>

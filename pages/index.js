@@ -108,7 +108,7 @@ const Page = () => {
 
           <List align={'right'} >
             <ListItem>
-              <Link href={'https://github.com/KatsuroSan'} target={'_blank'}>
+              <Link href={'https://github.com/qatsuro'} target={'_blank'}>
                 <Button variant={'ghost'}
                   leftIcon={<Icon as={IoLogoGithub} />}
                   colorScheme={'purple'}>
