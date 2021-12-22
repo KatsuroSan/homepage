@@ -112,7 +112,7 @@ const Page = () => {
                 <Button variant={'ghost'}
                   leftIcon={<Icon as={IoLogoGithub} />}
                   colorScheme={'purple'}>
-                  @KatsuroSan
+                  @qatsuro
                 </Button>
               </Link>
             </ListItem>
